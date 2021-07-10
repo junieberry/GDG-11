@@ -24,10 +24,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:id="@+id/request_recycler"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/tread_text" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/response_recycler"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/request_recycler" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ing_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/response_recycler" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

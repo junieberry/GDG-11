@@ -4,21 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
 import com.example.gdg11_android.R
 import com.example.gdg11_android.databinding.ActivityMainBinding
 import com.example.gdg11_android.fragment.MainFeedFragment
 import com.example.gdg11_android.fragment.MyPageFragment
 import com.example.gdg11_android.fragment.TradeFragment
-import com.example.gdg11_android.viewmodel.MainFeedViewModel
 import com.example.gdg11_android.viewmodel.MainViewModel
-import com.example.gdg11_android.viewmodel.MyPageViewModel
-import com.example.gdg11_android.viewmodel.TradeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
-
 
     lateinit var binding : ActivityMainBinding
     private val viewModel : MainViewModel by viewModel()
@@ -46,11 +41,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun changeFragment(fragment: Fragment): Boolean {
         supportFragmentManager .beginTransaction()
             .replace(R.id.main_viewpager, fragment)
             .commit()
-        return true
+            return true
     }
 }

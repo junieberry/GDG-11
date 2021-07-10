@@ -5,7 +5,6 @@ import androidx.annotation.RequiresApi
 import com.example.gdg11_android.base.BaseApi
 import com.example.gdg11_android.base.BaseViewModel
 import com.example.gdg11_android.base.SingleLiveEvent
-import com.example.gdg11_android.dto.GetFeedData
 import com.example.gdg11_android.dto.TokenData
 import com.example.gdg11_android.pref.LocalStorage
 import io.reactivex.android.schedulers.AndroidSchedulers

@@ -21,8 +21,7 @@ class SharedPrefStorage(val context: Context) : LocalStorage {
         }
 
     override fun getAccessToken(): String =
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IjA0MDYwNmNtakBnbWFpbC5jb20iLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjI1OTIxNDE2LCJleHAiOjE2MjU5Mjg2MTZ9.re_ekN2YpwhowVdabeH80KMCisfWvKotnwss3Nibpoc"
-
+        "Bearer eyJlbWFpbCI6IjA0MDYwNmNtakBnbWFpbC5jb20iLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjI1OTU4NjY0LCJleHAiOjE2MjU5NjU4NjR9.hD5KCTFpd3ThomB4VLWxBkNuIDn7QPvlqALOgkHLZYU"
 
     override fun getRefreshToken(): String =
         "Bearer " + getPref(context).getString(refreshTokenKey, "")

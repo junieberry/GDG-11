@@ -9,6 +9,7 @@ import com.example.gdg11_android.pref.SharedPrefStorage
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
+import java.time.LocalDateTime
 
 class MainFeedViewModel(
     val sharedPrefStorage: LocalStorage,
@@ -20,7 +21,8 @@ class MainFeedViewModel(
     val accessToken = sharedPrefStorage.getAccessToken()
 
     fun getFeed(){
-        val apiResult = baseApi.feedList(accessToken,"1")
+        val time = System.currentTimeMillis().toString()
+        val apiResult = baseApi.feedList("1","1")
         val disposableSingleObserver = object : DisposableSingleObserver<List<GetFeedData>>(){
             override fun onSuccess(t: List<GetFeedData>) {
                 println("성공")
@@ -30,7 +32,7 @@ class MainFeedViewModel(
 
             override fun onError(e: Throwable) {
                 println("실패")
-                failEvent.setValue("실패메세")
+                failEvent.setValue("실패메세지")
             }
         }
         val observer = apiResult

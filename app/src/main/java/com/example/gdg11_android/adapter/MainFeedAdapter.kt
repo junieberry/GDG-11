@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gdg11_android.databinding.ItemMainfeedBinding
-import com.example.gdg11_android.databinding.MainFeedBinding
 import com.example.gdg11_android.viewmodel.MainFeedViewModel
 
 class MainFeedAdapter(val viewModel : MainFeedViewModel, val feed : Int) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
