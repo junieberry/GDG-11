@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExchangeActivity"
+    tools:context=".exchange.ExchangeActivity"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/you_background">
+        android:background="@color/main_theme">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/me_background">
+        android:background="@color/sub_theme">
 
 
         <ImageButton
@@ -74,7 +74,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"
-            android:background="android:color/transparent"
+
+            android:background="@null"
+            android:onClick="o_clicked"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_plus"
             app:layout_constraintHorizontal_bias="0.5"
@@ -85,7 +87,8 @@
             android:id="@+id/button_plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="android:color/transparent"
+            android:background="@null"
+            android:onClick="plus_clicked"
             app:layout_constraintBottom_toBottomOf="@+id/button_o"
             app:layout_constraintEnd_toStartOf="@+id/button_x"
             app:layout_constraintHorizontal_bias="0.5"
@@ -97,7 +100,8 @@
             android:id="@+id/button_x"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="android:color/transparent"
+            android:background="@null"
+            android:onClick="x_clicked"
             app:layout_constraintBottom_toBottomOf="@+id/button_plus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
