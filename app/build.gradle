@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.gdg11_android"
-        minSdkVersion 23
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -73,9 +73,9 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:1.0.0"
 
     //koin
-    implementation "org.koin:koin-androidx-scope:2.2.2"
-    implementation "org.koin:koin-androidx-viewmodel:2.2.2"
-    implementation "org.koin:koin-androidx-ext:2.2.2"
+    implementation "org.koin:koin-androidx-scope:2.2.0-alpha-1"
+    implementation "org.koin:koin-androidx-viewmodel:2.2.0-alpha-1"
+    implementation "org.koin:koin-androidx-fragment:2.2.0-alpha-1"
 
     //material
     implementation 'com.google.android.material:material:1.4.0-rc01'
