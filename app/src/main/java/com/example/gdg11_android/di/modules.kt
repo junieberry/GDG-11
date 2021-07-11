@@ -1,5 +1,6 @@
 package com.example.gdg11_android.di
 
+import com.example.gdg11_android.activity.MainActivity
 import com.example.gdg11_android.adapter.MainFeedAdapter
 import com.example.gdg11_android.base.BaseApi
 import com.example.gdg11_android.fragment.MainFeedFragment
@@ -15,6 +16,9 @@ import org.koin.dsl.module
 val modules = module {
     single{ BaseApi() }
 
+
+    single { MainActivity() }
+    single{}
     single { MainFeedAdapter(get(),get()) }
 
     single { MainFeedFragment() }
@@ -22,7 +26,7 @@ val modules = module {
     single <LocalStorage>{ SharedPrefStorage(get()) }
 
     viewModel { MainViewModel(get(),get()) }
-    viewModel { MainFeedViewModel(get(),get()) }
+    viewModel { MainFeedViewModel(get(),get(),get()) }
     viewModel { TradeViewModel() }
     viewModel { MyPageViewModel() }
 }

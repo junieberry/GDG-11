@@ -41,9 +41,13 @@ class MainFeedFragment : Fragment(){
         feedRecyclerView.layoutManager
         feedRecyclerView.adapter = feedAdapter
 
+        viewModel.successEvent.observe(this,{
+            val intent = Intent(activity,ExchangeActivity::class.java)
+            startActivity(intent)
+        })
+
         viewModel.getFeed()
 
         return binding.root
     }
-
 }

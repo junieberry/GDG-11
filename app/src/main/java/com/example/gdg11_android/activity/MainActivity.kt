@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottom_navi)
         changeFragment(MainFeedFragment())
 
+        binding.mainViewpager.setOnClickListener {
+            intent()
+        }
+
         bottomNavigateBar()
     }
     fun bottomNavigateBar(){

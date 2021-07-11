@@ -8,14 +8,14 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gdg11_android.databinding.ActivityExchangeBinding
 import io.socket.client.IO
-import io.socket.client.Socket
+import io.socket.client.Socket.EVENT_CONNECT
 import org.json.JSONObject
 import java.net.Socket
 import java.net.URISyntaxException
 
 class ExchangeActivity : AppCompatActivity() {
     lateinit var binding:ActivityExchangeBinding
-    lateinit var mSocket: Socket
+    lateinit var mSocket: io.socket.client.Socket
 
     var room_id="1231232"
     var post_id=1
@@ -57,11 +57,7 @@ class ExchangeActivity : AppCompatActivity() {
             mSocket=IO.socket(Uri.toString())
             mSocket.connect()
 
-            mSocket.on(Socket.EVENT_CONNECT) {
-                println("성공")
-            }.on(Socket.EVENT_CONNECT_ERROR) {
-                println("실패")
-            }
+
 
             val data=JSONObject()
             data.put("room", room_id)

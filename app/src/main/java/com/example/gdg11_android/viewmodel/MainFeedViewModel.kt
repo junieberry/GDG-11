@@ -7,6 +7,7 @@ import com.example.gdg11_android.base.BaseApi
 import com.example.gdg11_android.base.BaseViewModel
 import com.example.gdg11_android.base.SingleLiveEvent
 import com.example.gdg11_android.dto.GetFeedData
+import com.example.gdg11_android.fragment.MainFeedFragment
 import com.example.gdg11_android.pref.LocalStorage
 import com.example.gdg11_android.pref.SharedPrefStorage
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -17,7 +18,7 @@ import java.time.LocalDateTime
 class MainFeedViewModel(
     val sharedPrefStorage: LocalStorage,
     val api : BaseApi,
-    val mainActivity: MainActivity
+    val mainFeedFragment: MainFeedFragment
 ):BaseViewModel() {
     private val baseApi = api.getInstance()
     val successEvent = SingleLiveEvent<Unit>()
@@ -48,7 +49,7 @@ class MainFeedViewModel(
         addDisposable(observer)
     }
     fun onItemClick(){
-        mainActivity.intent()
+        successEvent.setValue(Unit)
     }
 }
 
