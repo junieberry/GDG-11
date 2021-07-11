@@ -2,6 +2,7 @@ package com.example.gdg11_android.exchange
 
 import android.net.Uri
 import android.os.Bundle
+import android.system.Os.socket
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -9,11 +10,12 @@ import com.example.gdg11_android.databinding.ActivityExchangeBinding
 import io.socket.client.IO
 import io.socket.client.Socket
 import org.json.JSONObject
+import java.net.Socket
 import java.net.URISyntaxException
 
 class ExchangeActivity : AppCompatActivity() {
     lateinit var binding:ActivityExchangeBinding
-    lateinit var mSocket:Socket
+    lateinit var mSocket: Socket
 
     var room_id="1231232"
     var post_id=1

@@ -1,5 +1,6 @@
 package com.example.gdg11_android.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,9 +11,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gdg11_android.R
+import com.example.gdg11_android.activity.MainActivity
 import com.example.gdg11_android.adapter.MainFeedAdapter
 import com.example.gdg11_android.databinding.MainFeedBinding
 import com.example.gdg11_android.dto.GetFeedData
+import com.example.gdg11_android.exchange.ExchangeActivity
 import com.example.gdg11_android.viewmodel.MainFeedViewModel
 import org.koin.android.ext.android.bind
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -38,8 +41,14 @@ class MainFeedFragment : Fragment(){
         feedRecyclerView.layoutManager
         feedRecyclerView.adapter = feedAdapter
 
+        feedRecyclerView.setOnClickListener {
+            val intent = Intent(activity, ExchangeActivity::class.java)
+            startActivity(intent)
+        }
+
         viewModel.getFeed()
 
         return binding.root
     }
+
 }
