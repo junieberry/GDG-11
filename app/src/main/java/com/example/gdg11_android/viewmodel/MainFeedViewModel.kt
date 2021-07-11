@@ -1,6 +1,7 @@
 package com.example.gdg11_android.viewmodel
 
 import androidx.lifecycle.MutableLiveData
+import com.example.gdg11_android.activity.MainActivity
 import com.example.gdg11_android.adapter.MainFeedAdapter
 import com.example.gdg11_android.base.BaseApi
 import com.example.gdg11_android.base.BaseViewModel
@@ -15,7 +16,8 @@ import java.time.LocalDateTime
 
 class MainFeedViewModel(
     val sharedPrefStorage: LocalStorage,
-    val api : BaseApi
+    val api : BaseApi,
+    val mainActivity: MainActivity
 ):BaseViewModel() {
     private val baseApi = api.getInstance()
     val successEvent = SingleLiveEvent<Unit>()
@@ -44,6 +46,9 @@ class MainFeedViewModel(
             .subscribeWith(disposableSingleObserver)
 
         addDisposable(observer)
+    }
+    fun onItemClick(){
+        mainActivity.intent()
     }
 }
 

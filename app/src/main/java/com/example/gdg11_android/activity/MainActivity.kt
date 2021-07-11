@@ -1,11 +1,13 @@
 package com.example.gdg11_android.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.gdg11_android.R
 import com.example.gdg11_android.databinding.ActivityMainBinding
+import com.example.gdg11_android.exchange.ExchangeActivity
 import com.example.gdg11_android.fragment.MainFeedFragment
 import com.example.gdg11_android.fragment.MyPageFragment
 import com.example.gdg11_android.fragment.TradeFragment
@@ -39,6 +41,10 @@ class MainActivity : AppCompatActivity() {
                 else -> changeFragment(MyPageFragment())
             }
         }
+    }
+    fun intent(){
+        val intent = Intent(this, ExchangeActivity::class.java)
+        startActivity(intent)
     }
 
     private fun changeFragment(fragment: Fragment): Boolean {

@@ -41,11 +41,6 @@ class MainFeedFragment : Fragment(){
         feedRecyclerView.layoutManager
         feedRecyclerView.adapter = feedAdapter
 
-        feedRecyclerView.setOnClickListener {
-            val intent = Intent(activity, ExchangeActivity::class.java)
-            startActivity(intent)
-        }
-
         viewModel.getFeed()
 
         return binding.root
