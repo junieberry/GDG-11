@@ -6,6 +6,9 @@
         <variable
             name="vm"
             type="com.example.gdg11_android.viewmodel.MainFeedViewModel" />
+        <variable
+            name="position"
+            type="Integer" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,7 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:layout_marginStart="15dp"
+            android:text="스타벅스"
+           android:layout_marginStart="15dp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/black"
@@ -40,6 +44,7 @@
             android:textSize="14sp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="3dp"
+            android:text="아이스 아메리카노 Tall"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@id/brand_name"
             android:textColor="@color/black"
@@ -54,7 +59,8 @@
             android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@id/item"
-            tools:text="가나다라마바사"
+            android:text="유효기간 ~2021.12.31"
+            tools:text="유효기간 ~2021.12.31"
             tools:ignore="SmallSp" />
 
         <TextView
@@ -64,7 +70,7 @@
             android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:text="테스트테스트"
+            android:text="4,100원"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/left_day"
             tools:text="가격가격가격가격" />

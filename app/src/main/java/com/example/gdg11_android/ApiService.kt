@@ -11,7 +11,7 @@ interface ApiService {
         @Query("page") page : String,
         @Query("size") size : String
 
-    ):Single<List<GetFeedData>>
+    ):Single<ArrayList<GetFeedData>>
 
     @GET("auth/google")
 

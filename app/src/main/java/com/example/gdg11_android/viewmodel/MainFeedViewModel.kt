@@ -1,5 +1,7 @@
 package com.example.gdg11_android.viewmodel
 
+import androidx.lifecycle.MutableLiveData
+import com.example.gdg11_android.adapter.MainFeedAdapter
 import com.example.gdg11_android.base.BaseApi
 import com.example.gdg11_android.base.BaseViewModel
 import com.example.gdg11_android.base.SingleLiveEvent
@@ -18,15 +20,16 @@ class MainFeedViewModel(
     private val baseApi = api.getInstance()
     val successEvent = SingleLiveEvent<Unit>()
     val failEvent = SingleLiveEvent<String>()
-    val accessToken = sharedPrefStorage.getAccessToken()
+
+    var feedList = MutableLiveData<List<GetFeedData>>()
 
     fun getFeed(){
-        val time = System.currentTimeMillis().toString()
         val apiResult = baseApi.feedList("1","1")
-        val disposableSingleObserver = object : DisposableSingleObserver<List<GetFeedData>>(){
-            override fun onSuccess(t: List<GetFeedData>) {
+        val disposableSingleObserver = object : DisposableSingleObserver<ArrayList<GetFeedData>>(){
+            override fun onSuccess(t: ArrayList<GetFeedData>) {
                 println("성공")
                 println(t[1])
+                feedList.value = t
                 successEvent.setValue(Unit)
             }
 

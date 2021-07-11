@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gdg11_android.R
 import com.example.gdg11_android.adapter.MainFeedAdapter
 import com.example.gdg11_android.databinding.MainFeedBinding
+import com.example.gdg11_android.dto.GetFeedData
 import com.example.gdg11_android.viewmodel.MainFeedViewModel
 import org.koin.android.ext.android.bind
 import org.koin.androidx.viewmodel.ext.android.viewModel
