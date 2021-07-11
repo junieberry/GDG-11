@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="main_theme">#4859DD</color>
+    <color name="sub_theme">#FFEC70</color>
+    <color name="o_background">#4859DD</color>
+    <color name="clicked_o">#2A3EE0</color>
+    <color name="plus_background">#FF7F1E</color>
+    <color name="clicked_plus">#E56300</color>
+    <color name="x_background">#DD4848</color>
+    <color name="clicked_x">#D91616</color>
 </resources>

@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">GDG11-Android</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exchange_givememore">더주세요</string>
+    <string name="exchange_moregifticon">기프티콘을 추가하시겠습니까?</string>
+    <string name="exchange_addgifticon">기프티콘 추가하기</string>
+    <string name="exchange_successed">거래완료!</string>
+    <string name="exchange_failed">거래실패</string>
+    <string name="exchange_successed_check">마이페이지-구매내역에서 확인해주세요.</string>
+    <string name="exchange_failed_check">거래가 종료되었습니다.</string>
+    <string name="check">확인</string>
+    <string name="cancel">취소</string>
 </resources>
